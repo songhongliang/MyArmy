@@ -44,8 +44,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 400,
-      "height": 400
+      "width": 10,
+      "height": 10
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -74,8 +74,8 @@
     "_lineWidth": 4,
     "_strokeColor": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
+      "r": 255,
+      "g": 255,
       "b": 0,
       "a": 255
     },
@@ -83,9 +83,9 @@
     "_lineCap": 0,
     "_fillColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 177,
+      "g": 0,
+      "b": 0,
       "a": 255
     },
     "_miterLimit": 10
@@ -106,7 +106,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "309aaad4-55e7-46bc-a341-529e5d9bd38e"
     },
     "fileId": "5d5FaXOQJOFJ65icHmxHIH",
     "sync": false

@@ -1,15 +1,8 @@
-// Learn cc.Class:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
+/**
+ * 战士
+ * 
+ */
 var HP = require("Life")
-
-
 cc.Class({
     extends: cc.Component,
 
@@ -28,9 +21,20 @@ cc.Class({
     },
 
     start () {
-        var ctx = this.getComponent(cc.Graphics);
-        ctx.circle(0,0, 10);
-        ctx.stroke();
+        // var ctx = this.getComponent(cc.Graphics);
+        // ctx.circle(0,0, 10);
+        // ctx.stroke();
+        // ctx.fill();
+    },
+
+    changeColor (color){
+        var g = this.getComponent(cc.Graphics);
+        // g.strokeColor = color;
+        g.fillColor = color;
+
+        g.circle(0,0, 10);
+        g.stroke();
+        g.fill();
     },
 
     unuse (data) {

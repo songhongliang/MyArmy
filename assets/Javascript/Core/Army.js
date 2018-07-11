@@ -1,6 +1,11 @@
+/**
+ * 
+ * 军队
+ * 
+ */
 
 var Soldier = require("Soldier");
-
+var Utils = require("MathUtils");
 
 
 var ArmyID = 0;
@@ -12,6 +17,7 @@ var Army = function(){
 Army.prototype.init = function(){
     this._id = ++ArmyID;
     this.soldiers = [];
+    this.teamColor = cc.color(Utils.randomColor());
 }
 
 //获取军队ID
@@ -21,10 +27,10 @@ Army.prototype.getID = function(){
 
 
 Army.prototype.addSoldier = function(soldier){
-    if(soldier instanceof Soldier)
-    {
-        this.soldiers.push(soldier);
-    }
+    var s = soldier.getComponent("Soldier");
+    console.log("====addSoldier======="+this.teamColor)
+    s.changeColor(this.teamColor);
+    this.soldiers.push(soldier);
 };
 
 Army.prototype.deleteSoldier = function(soldierID){

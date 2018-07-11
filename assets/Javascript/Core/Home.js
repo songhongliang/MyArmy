@@ -1,52 +1,40 @@
-// Learn cc.Class:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
+/**
+ * 大本营
+ * 
+ * 
+ */
+
 
 var HP = require("Life");
- var armyMng = require("ArmyMng").armyMng;
+var armyMng = require("ArmyMng").armyMng;
+
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        hp: {
-            // ATTRIBUTES:
-            default: null,        // The default value will be used only when the component attaching
-            type: HP,               // optional, default is typeof default
+        hp: {               //生命
+            default: null, 
+            type: HP,         
         },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
+        _time:0,            //持续时间
+
+        armyBatch:0
     },
-
-    // LIFE-CYCLE CALLBACKS:
-
     onLoad () {
         this.hp = new HP();
+        this.hp.init(10000);
     },
 
     start () {
-        cc.log("====start=====")
-        armyMng.createArmy();
-
-        var node = new cc.Node('Label');
-        var lb = node.addComponent(cc.Label);
-        lb.string = "=========";
-        node.parent = this.node; 
-
+        
     },
 
     update (dt) {
-
+        this._time += dt;
+        if(this._time >= this.armyBatch*3){
+            this.armyBatch++;
+            var armyPostion = {x:this.node.x,y:this.node.y+300};
+            armyMng.createArmy({p:armyPostion});
+        }
     },
 });
