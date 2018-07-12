@@ -21,20 +21,10 @@ cc.Class({
     },
 
     start () {
-        // var ctx = this.getComponent(cc.Graphics);
-        // ctx.circle(0,0, 10);
-        // ctx.stroke();
-        // ctx.fill();
     },
 
     changeColor (color){
-        var g = this.getComponent(cc.Graphics);
-        // g.strokeColor = color;
-        g.fillColor = color;
-
-        g.circle(0,0, 10);
-        g.stroke();
-        g.fill();
+        this.node.color = color;
     },
 
     unuse (data) {

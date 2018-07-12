@@ -87,8 +87,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 800,
-      "height": 1280
+      "width": 450,
+      "height": 800
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -96,8 +96,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 400,
-      "y": 640
+      "x": 225,
+      "y": 400
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -413,8 +413,8 @@
     "_enabled": true,
     "_designResolution": {
       "__type__": "cc.Size",
-      "width": 800,
-      "height": 1280
+      "width": 450,
+      "height": 800
     },
     "_fitWidth": true,
     "_fitHeight": false
