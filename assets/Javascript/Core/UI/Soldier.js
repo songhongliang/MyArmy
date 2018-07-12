@@ -2,7 +2,7 @@
  * 战士
  * 
  */
-var HP = require("Life")
+var HP = require("Life");
 cc.Class({
     extends: cc.Component,
 

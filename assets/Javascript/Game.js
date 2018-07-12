@@ -1,5 +1,7 @@
 /**
- * 
+ * 完成对游戏世界信息的更新和收集
+ *
+ * 游戏初始化
  */
 var armyMng = require("ArmyMng").armyMng;
 cc.Class({
