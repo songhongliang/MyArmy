@@ -3,7 +3,7 @@
  * 
  */
 
-var ActorTYpe = require("Types").ActorTYpe;
+var ActorType = require("Types").ActorType;
 var StateMachine = require("StateMachine");
 var HP = require("Life");
 
@@ -14,7 +14,7 @@ var ActorBase = cc.Class({
     init(){
         this._fsm = new StateMachine();
         this._hp = new HP();
-        this._type = ActorTYpe.unknown;
+        this._type = ActorType.unknown;
     },
 
     //移动

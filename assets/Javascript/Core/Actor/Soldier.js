@@ -13,10 +13,6 @@ cc.Class({
         this._uiComponent = uiComponent;
     },
 
-    changeColor (color){
-        this.node.color = color;
-    },
-
     unuse (data) {
 
     },

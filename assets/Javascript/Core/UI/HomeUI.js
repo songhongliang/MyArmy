@@ -3,31 +3,23 @@
  * 
  * 
  */
-
-
-var HP = require("Life");
-var armyMng = require("ArmyMng").armyMng;
+var Logic = require("Home");
 
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        _time:0,            //持续时间
-        armyBatch:0         //军队批次
+        guardPrefab:cc.Prefab
     },
     onLoad () {
+        this._logic = new Logic();
+        this._logic.init(this);
     },
 
     start () {
-        
     },
 
     update (dt) {
-        this._time += dt;
-        if(this._time >= this.armyBatch*100000){
-            this.armyBatch++;
-            var armyPostion = {x:this.node.x,y:this.node.y+200};
-            armyMng.createArmy({p:armyPostion});
-        }
+        this._logic.update(dt);
     },
 });

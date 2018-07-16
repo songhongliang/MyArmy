@@ -11,7 +11,6 @@
 var Soldier = require("Soldier");
 var Utils = require("MathUtils");
 
-
 var ArmyID = 0;
 
 var Army = function(){
@@ -31,8 +30,7 @@ Army.prototype.getID = function(){
 
 
 Army.prototype.addSoldier = function(soldier){
-    var s = soldier.getComponent("Soldier");
-    console.log("====addSoldier======="+this.teamColor)
+    var s = soldier.getComponent("SoldierUI");
     s.changeColor(this.teamColor);
     this.soldiers.push(soldier);
 };
