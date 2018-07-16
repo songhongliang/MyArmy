@@ -12,16 +12,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        hp: {               //生命
-            default: null, 
-            type: HP,         
-        },
         _time:0,            //持续时间
         armyBatch:0         //军队批次
     },
     onLoad () {
-        this.hp = new HP();
-        this.hp.init(10000);
     },
 
     start () {

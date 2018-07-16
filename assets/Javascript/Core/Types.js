@@ -25,6 +25,7 @@ const ProjectileType = cc.Enum({
 
 //演员 兵种 
 const ActorType = cc.Enum({
+    unkonwn:0,
     home: 1,        //大本营
     guard: 2,       //卫兵
     soldier : 3     //战士

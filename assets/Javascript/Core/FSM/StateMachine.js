@@ -5,25 +5,26 @@
  */
 //若有冲突考虑添加donothing状态
 var stateType = cc.Enum ({
-    idleState,
-    moveState,
-    moveEndState,
-    fightState,
-    fightEndState,
-    deadState,
-    deadEndState
+    idleState:1,
+    moveState:2,
+    moveEndState:3,
+    fightState:4,
+    fightEndState:5,
+    deadState:6,
+    deadEndState:7
 });
-var StateMachine = cc.class ({
-    /**当前状态*/
-    _curState: stateType,
-    /**引用对象*/
-    _obj: any,
+var StateMachine = cc.Class ({
+    
     /**自身实例*/
     //private static instance: StateMachine;
     
     /**构造函数*/
-    ctor(obj) {
+    ctor(){},
+    init(obj) {
+        /**引用对象*/
         this._obj = obj;
+        /**当前状态*/
+        this._curState = 0;
     },
     /**改变状态*/
     changeState (state) {

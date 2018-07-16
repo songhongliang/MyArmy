@@ -16,9 +16,6 @@ cc.Class({
             }
         },
     },
-    onLoad (){
-        this.hp = 100;
-    },
     init (v){
         this.hp = v;
     },

@@ -2,22 +2,14 @@
  * 战士
  * 
  */
-var HP = require("Life");
+var Logic = require("Soldier");
+
 cc.Class({
     extends: cc.Component,
 
-    properties: {
-        hp: {
-            default: null,        // The default value will be used only when the component attaching
-            type: HP, // optional, default is typeof default
-            serializable: true,   // optional, default is true
-        }
-    },
-
-    // LIFE-CYCLE CALLBACKS:
-
     onLoad () {
-        this.hp = new HP();
+        this._logic = new Logic();
+        this._logic.init(this);
     },
 
     start () {
